@@ -1,6 +1,6 @@
 # rahgo 
 
-This is a hugo theme I use for my own personal website.
+This is a [Hugo](https://github.com/gohugoio/hugo) theme I use for my own personal website.
 Hugo let you easily handle documents using markdown.
 
 ## Features
@@ -17,7 +17,7 @@ rahgo default setup lets you handle 5 default pages + custom blog articles:
 
 For now these are encoded, but I will soon make the pages customizable using a configuration and a script.
 
-Add new posts running the following command from your hugo root directory:
+Add new posts running the following command from your Hugo root directory:
 
 `hugo new content content/posts/<post-name>.md>`
 
