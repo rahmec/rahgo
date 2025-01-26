@@ -28,7 +28,7 @@ echo "theme = 'rahgo'" >> hugo.toml
 
 ## Configuration
 
-Configure inside hugo.tml your website and url and contact information:
+Configure inside `hugo.toml` your website and url and contact information:
 
 ```
 baseURL = 'https://<website-domain>/'
