@@ -17,6 +17,10 @@ rahgo default setup lets you handle 5 default pages + custom blog articles:
 
 For now these are encoded, but I will soon make the pages customizable using a configuration and a script.
 
+Add new posts running the following command from your hugo root directory:
+
+`hugo new content content/posts/<post-name>.md>`
+
 ## Setup 
 
 ```
