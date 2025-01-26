@@ -1,0 +1,18 @@
+<!--<h1>{{ site.Title }}</h1>-->
+<div class=header style="position: relative">
+<div>
+    <span><a href="mailto:{{.Site.Params.contact.email}}">{{.Site.Params.contact.email}}</a></span>
+<span style="position:absolute; right:0;">
+    <a href='{{.Site.BaseURL}}'>Home</a>
+    {{ if not .IsHome }} 
+        &nbsp;/&nbsp;
+        {{ if eq .Page.Type "page" }}
+            <a href='{{ .RelPermalink }}'/>{{ .Page.Title }}</a>
+        {{ else }}
+            <a href='{{ .Site.BaseURL }}/{{ .Page.Type }}'/>{{ strings.FirstUpper .Page.Type }}</a>
+        {{ end }}
+    {{ end }}
+</span>
+</div>
+</div>
+    <!--{{ partial "menu.html" (dict "menuID" "main" "page" .) }}-->
