@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="{{ site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
   {{ partial "head.html" . }}
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
+</head>
 </head>
 <body>
   <header>
     {{ partial "header.html" . }}
   </header>
-  <hr/>
-  <main>
+  <!--<hr/>-->
+  <div class="wrapper">
+  <main class="content">
     {{ block "main" . }}
     {{ .Content }}
     {{ end }}
@@ -20,8 +25,9 @@
     {{ end -}}
   </main>
   <hr/>
-  <footer>
+  <footer class="footer">
     {{ partial "footer.html" . }}
   </footer>
+  </div>
 </body>
 </html>

@@ -1,27 +1,28 @@
 {{ define "main" }}
   {{ .Content }}
   <a href={{.Site.Params.contact.github}}><img class="contact-logo" src="/github-mark.svg" alt="GitHub repo"></a>
-  <hr/>
+  <a href={{.Site.Params.contact.scholat}}><img class="contact-logo" src="/scholar.png" alt="GitHub repo"></a>
+  <a href={{.Site.Params.contact.orcid}}><img class="contact-logo" src="/orcid.png" alt="GitHub repo"></a>
   <div class="home-block">
-  <h2>My Stuff</h2>
-  <ul>
-      <li>🧮<a href=" {{ .Site.BaseURL }}papers "> Papers</a></li> 
-      <li>📜<a href=" {{ .Site.BaseURL }}resume "> Resume</a></li>
-      <li>📚<a href=" {{ .Site.BaseURL }}library "> Library</a></li>
-      <li>⚙️<a href=" {{ .Site.BaseURL }}projects "> Projects</a></li>
-      <li>⌨️<a href=" {{ .Site.BaseURL }}posts "> Posts</a></li>
-  </ul>
-  </div>
-  <hr/>
-  <div class="home-block">
-  <h2>Posts</h2>
-  {{ range where site.RegularPages "Type" "posts"}}
-    <ul>
-        <li>
-            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "02 Jan 2006" }}</time> &ndash;
-            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-        </li>
-    </ul>
-  </div>
+  {{ with readFile "data/publications.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No publications </p>
   {{ end }}
+  </div>
+  <div class="home-block">
+  {{ with readFile "data/talks.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No talks </p>
+  {{ end }}
+  </div>
+  <div class="home-block">
+  {{ with readFile "data/teaching.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No Teaching </p>
+  {{ end }}
+  </div>
+    
 {{ end }}

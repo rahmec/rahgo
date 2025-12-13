@@ -26,11 +26,7 @@ footer {
 }
 
 a {
-  color: #84b59f;
-  text-decoration: underline;
-}
-a:hover {
-  color: #68b0ab;
+  color: #00e;
   text-decoration: underline;
 }
 
