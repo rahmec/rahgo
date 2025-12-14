@@ -1,8 +1,8 @@
 {{ define "main" }}
   {{ .Content }}
   <a href={{.Site.Params.contact.github}}><img class="contact-logo" src="/github-mark.svg" alt="GitHub repo"></a>
-  <a href={{.Site.Params.contact.scholat}}><img class="contact-logo" src="/scholar.png" alt="GitHub repo"></a>
-  <a href={{.Site.Params.contact.orcid}}><img class="contact-logo" src="/orcid.png" alt="GitHub repo"></a>
+  <a href={{.Site.Params.contact.scholar}}><img class="contact-logo" src="/scholar.png" alt="Scholar profile"></a>
+  <a href={{.Site.Params.contact.orcid}}><img class="contact-logo" src="/orcid.png" alt="ORCID"></a>
   <div class="home-block">
   {{ with readFile "data/publications.md" }}
     {{ . | markdownify }}
