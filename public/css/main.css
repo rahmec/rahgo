@@ -29,17 +29,9 @@ a {
   color: #84b59f;
   text-decoration: underline;
 }
-
 a:hover {
   color: #68b0ab;
   text-decoration: underline;
-}
-
-a .domain {
-  color: #222;
-}
-a.domain:hover {
-  color: #222;
 }
 
 .title {
