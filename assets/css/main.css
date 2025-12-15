@@ -35,11 +35,13 @@ a:hover {
   text-decoration: underline;
 }
 
-a .domain {
+.domain {
   color: #222;
+  text-decoration: underline;
 }
 a.domain:hover {
   color: #222;
+  text-decoration: underline;
 }
 
 .title {
