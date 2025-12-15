@@ -37,11 +37,11 @@ a:hover {
 
 .domain {
   color: #222;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a.domain:hover {
   color: #222;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .title {
