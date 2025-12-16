@@ -4,6 +4,7 @@
   <a href={{.Site.Params.contact.scholar}}><img class="contact-logo" src="/scholar.png" alt="Scholar profile"></a>
   <a href={{.Site.Params.contact.orcid}}><img class="contact-logo" src="/orcid.png" alt="ORCID iD"></a>
   <div class="home-block">
+      <p> See <a href='{{.Site.BaseURL}}/cv'}}">full cv</a>.</p>
   {{ with readFile "data/publications.md" }}
     {{ . | markdownify }}
   {{ else }}
