@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <div class="home-block">
+  {{ with readFile "data/education.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No education </p>
+  {{ end }}
+  </div>
+  <div class="home-block">
+  {{ with readFile "data/experience.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No experience </p>
+  {{ end }}
+  </div>
+  <div class="home-block">
+  {{ with readFile "data/publications.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No publications </p>
+  {{ end }}
+  </div>
+  <div class="home-block">
+  {{ with readFile "data/talks.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No talks </p>
+  {{ end }}
+  </div>
+  <div class="home-block">
+  {{ with readFile "data/teaching.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No Teaching </p>
+  {{ end }}
+  </div>
+{{ end }}

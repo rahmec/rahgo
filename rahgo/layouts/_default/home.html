@@ -1,0 +1,29 @@
+{{ define "main" }}
+  {{ .Content }}
+  <a href={{.Site.Params.contact.github}}><img class="contact-logo" src="/github-mark.svg" alt="GitHub repo"></a>
+  <a href={{.Site.Params.contact.scholar}}><img class="contact-logo" src="/scholar.png" alt="Scholar profile"></a>
+  <a href={{.Site.Params.contact.orcid}}><img class="contact-logo" src="/orcid.png" alt="ORCID iD"></a>
+  <p>See <a href='{{.Site.BaseURL}}/cv'>full cv</a>.</p>
+  <div class="home-block">
+  {{ with readFile "data/publications.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No publications </p>
+  {{ end }}
+  </div>
+  <div class="home-block">
+  {{ with readFile "data/talks.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No talks </p>
+  {{ end }}
+  </div>
+  <div class="home-block">
+  {{ with readFile "data/teaching.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No Teaching </p>
+  {{ end }}
+  </div>
+    
+{{ end }}

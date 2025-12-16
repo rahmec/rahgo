@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
+</head>
+</head>
+<body>
+  <header>
+    {{ partial "header.html" . }}
+  </header>
+  <!--<hr/>-->
+  <div class="wrapper">
+  <main class="content">
+    {{ block "main" . }}
+    {{ .Content }}
+    {{ end }}
+    {{ if .Param "nextprev" }}
+    {{ partial "nextprev.html" . -}}
+    {{ end -}}
+    {{ if .Param "taglist" }}
+    {{ partial "taglist.html" . -}}
+    {{ end -}}
+  </main>
+  <hr/>
+  <footer class="footer">
+    {{ partial "footer.html" . }}
+  </footer>
+  </div>
+</body>
+</html>

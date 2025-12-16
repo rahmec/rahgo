@@ -1,0 +1,10 @@
+<!--<h1>{{ site.Title }}</h1>-->
+<div class=header style="position: relative">
+<div>
+    <span><b><a class='domain' href='{{.Site.BaseURL}}'>{{ .Site.Params.contact.domain }}</a></b></span>
+<span style="position:absolute; right:0;">
+    <a href='{{.Site.BaseURL}}'>/home/rahmi/</a>{{ if not .IsHome }}{{ if eq .Page.Type "page" }}<a href='{{ .RelPermalink }}'/>{{.Page.Title}}</a>{{ else }}<a href='{{ .Site.BaseURL }}/{{ .Page.Type }}'/>{{ strings.FirstUpper .Page.Type }}</a>{{ end }}{{ end }}
+</span>
+</div>
+</div>
+    <!--{{ partial "menu.html" (dict "menuID" "main" "page" .) }}-->
