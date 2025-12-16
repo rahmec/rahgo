@@ -2,7 +2,7 @@
   {{ .Content }}
   <a href={{.Site.Params.contact.github}}><img class="contact-logo" src="/github-mark.svg" alt="GitHub repo"></a>
   <a href={{.Site.Params.contact.scholar}}><img class="contact-logo" src="/scholar.png" alt="Scholar profile"></a>
-  <a href={{.Site.Params.contact.orcid}}><img class="contact-logo" src="/orcid.png" alt="ORCID"></a>
+  <a href={{.Site.Params.contact.orcid}}><img class="contact-logo" src="/orcid.png" alt="ORCID iD"></a>
   <div class="home-block">
   {{ with readFile "data/publications.md" }}
     {{ . | markdownify }}
