@@ -3,7 +3,8 @@
 <div>
     <span><b><a class='domain' href='{{.Site.BaseURL}}'>{{ .Site.Params.contact.domain }}</a></b></span>
 <span style="position:absolute; right:0;">
-    <a href='{{.Site.BaseURL}}'>/home/rahmi</a>{{ if not .IsHome }}&thinsp;/&thinsp;{{ if eq .Page.Type "page" }}<a href='{{ .RelPermalink }}'/>{{.Page.Title}}</a>{{ else }}<a href='{{ .Site.BaseURL }}/{{ .Page.Type }}'/>{{ strings.FirstUpper .Page.Type }}</a>{{ end }}{{ end }}
+<!--<a href='{{.Site.BaseURL}}'>/home/rahmi</a>{{ if not .IsHome }}&thinsp;/&thinsp;{{ if eq .Page.Type "page" }}<a href='{{ .RelPermalink }}'/>{{.Page.Title}}</a>{{ else }}<a href='{{ .Site.BaseURL }}/{{ .Page.Type }}'/>{{ strings.FirstUpper .Page.Type }}</a>{{ end }}{{ end }}-->
+    <a href='{{.Site.BaseURL}}'>/home/rahmi/</a>{{ if not .IsHome }}{{ if eq .Page.Type "page" }}{{.Page.Title}}{{ end }}{{ end }}
 </span>
 </div>
 </div>
