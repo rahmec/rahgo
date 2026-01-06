@@ -1,4 +1,5 @@
 {{ define "main" }}
+<p> See <a href='{{.Site.BaseURL}}/cv.pdf'>pdf version</a>.<p>
   {{ .Content }}
   <div class="home-block">
   {{ with readFile "data/education.md" }}
