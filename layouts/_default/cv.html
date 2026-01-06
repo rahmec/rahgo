@@ -34,5 +34,12 @@
     <p> No Teaching </p>
   {{ end }}
   </div>
+  <div class="home-block">
+  {{ with readFile "data/competitions.md" }}
+    {{ . | markdownify }}
+  {{ else }}
+    <p> No Competitions </p>
+  {{ end }}
+  </div>
     
 {{ end }}
